@@ -63,7 +63,8 @@ export default function Home() {
         />
       <UI.Section title="Shoptet UI">
         <UI.SectionControls>
-          <UI.Help url="https://shoptet-stout.vercel.app/" text="shoptet-stout.vercel.app" />
+          <UI.ButtonLink href="https://github.com/TomKalina/next-shoptet-ui" variant="muted">github</UI.ButtonLink>
+          <UI.Help url="https://shoptet-stout.vercel.app/" text="storybook" />
         </UI.SectionControls>
         <form>
           <UI.CheckboxField label="CheckboxField" />
