@@ -67,24 +67,26 @@ export default function Home() {
           <UI.Help url="https://shoptet-stout.vercel.app/" text="storybook" />
         </UI.SectionControls>
         <form>
-          <UI.CheckboxField label="CheckboxField" />
-          <UI.ColorField label="ColorField" />
-          <UI.DateField label="DateField" />
-          <UI.EmailField label="EmailField" />
-          <UI.NumberField label="NumberField" />
-          <UI.PasswordField label="PasswordField" />
-          {/* <UI.PhoneField label="label" country={} /> */}
-          <UI.RadioField label="RadioField" />
-          <UI.SelectField
-            label="SelectField"
-            options={{ 1: "value 1", 2: "value 2" }}
-          />
-          <UI.StaticField label="StaticField">StaticField</UI.StaticField>
-          <UI.TextareaField label="TextareaField" />
-          <UI.TextField label="TextField" />
-          <UI.FormRow label="TextField">ahoj</UI.FormRow>
-          <UI.Button>Button</UI.Button>
-          <UI.ButtonLink>ButtonLink</UI.ButtonLink>
+          <div className='v2form'>
+            <UI.CheckboxField label="CheckboxField" />
+            <UI.ColorField label="ColorField" />
+            <UI.DateField label="DateField" />
+            <UI.EmailField label="EmailField" />
+            <UI.NumberField label="NumberField" />
+            <UI.PasswordField label="PasswordField" />
+            {/* <UI.PhoneField label="label" country={} /> */}
+            <UI.RadioField label="RadioField" />
+            <UI.SelectField
+              label="SelectField"
+              options={{ 1: "value 1", 2: "value 2" }}
+            />
+            <UI.StaticField label="StaticField">StaticField</UI.StaticField>
+            <UI.TextareaField label="TextareaField" />
+            <UI.TextField label="TextField" />
+            <UI.FormRow label="TextField">ahoj</UI.FormRow>
+            <UI.Button>Button</UI.Button>
+            <UI.ButtonLink>ButtonLink</UI.ButtonLink>
+          </div>
         </form>
         {/* <UI.Dropdown label="label" items={} /> */}
         {/* <UI.IconButton  /> */}
