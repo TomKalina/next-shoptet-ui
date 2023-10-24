@@ -12,7 +12,8 @@ import {
 } from "@shoptet/ui";
 
 export default function Home() {
-  const longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit."
+  const longText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.";
   const rows = [
     {
       name: "Frozen yoghurt",
@@ -51,23 +52,27 @@ export default function Home() {
     },
   ];
 
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <UI.Breadcrumbs
-          breadcrumbs={[
-            { id: 1, title: "Home", url: "#" },
-            { id: 2, title: "Storybook", url: "#" },
-            { id: 3, title: "Shoptet UI", url: "#" },
-          ]}
-        />
+      <UI.Breadcrumbs
+        breadcrumbs={[
+          { id: 1, title: "Home", url: "#" },
+          { id: 2, title: "Storybook", url: "#" },
+          { id: 3, title: "Shoptet UI", url: "#" },
+        ]}
+      />
       <UI.Section title="Shoptet UI">
         <UI.SectionControls>
-          <UI.ButtonLink href="https://github.com/TomKalina/next-shoptet-ui" variant="muted">github</UI.ButtonLink>
+          <UI.ButtonLink
+            href="https://github.com/TomKalina/next-shoptet-ui"
+            variant="muted"
+          >
+            github
+          </UI.ButtonLink>
           <UI.Help url="https://shoptet-stout.vercel.app/" text="storybook" />
         </UI.SectionControls>
         <form>
-          <div className='v2form'>
+          <div className="v2form">
             <UI.CheckboxField label="CheckboxField" />
             <UI.ColorField label="ColorField" />
             <UI.DateField label="DateField" />
@@ -99,7 +104,11 @@ export default function Home() {
         {/* <UI.Spinner /> */}
         {/* <UI.Tooltip text="test" /> */}
         <UI.StatsCard value="StatsCard" title={longText} />
-        <UI.SystemMessage level="alert" title="SystemMessage" description={longText} />
+        <UI.SystemMessage
+          level="alert"
+          title="SystemMessage"
+          description={longText}
+        />
         <Table>
           <TableHead>
             <TableRow>
