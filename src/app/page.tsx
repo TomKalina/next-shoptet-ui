@@ -53,15 +53,15 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <UI.Breadcrumbs
-        breadcrumbs={[
-          { id: 1, title: "Home", url: "#" },
-          { id: 2, title: "Storybook", url: "#" },
-          { id: 3, title: "Shoptet UI", url: "#" },
-        ]}
-      />
+    <main>
       <UI.Section title="Shoptet UI">
+        <UI.Breadcrumbs
+          breadcrumbs={[
+            { id: 1, title: "Home", url: "#" },
+            { id: 2, title: "Storybook", url: "#" },
+            { id: 3, title: "Shoptet UI", url: "#" },
+          ]}
+        />
         <UI.SectionControls>
           <UI.ButtonLink
             href="https://github.com/TomKalina/next-shoptet-ui"
