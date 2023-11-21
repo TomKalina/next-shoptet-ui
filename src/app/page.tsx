@@ -1,6 +1,6 @@
 "use client";
 
-import UI from "@shoptet/ui";
+import { Breadcrumbs, Button, ButtonLink, CheckboxField, ColorField, DateField, EmailField, FormRow, Help, NumberField, PasswordField, RadioField, Section, SectionControls, SelectField, StaticField, StatsCard, SystemMessage, TextField, TextareaField } from "@shoptet/ui";
 import "@shoptet/ui/dist/index.css";
 import {
   Table,
@@ -54,57 +54,57 @@ export default function Home() {
 
   return (
     <main>
-      <UI.Section title="Shoptet UI">
-        <UI.Breadcrumbs
+      <Section title="Shoptet UI">
+        <Breadcrumbs
           breadcrumbs={[
             { id: 1, title: "Home", url: "#" },
             { id: 2, title: "Storybook", url: "#" },
             { id: 3, title: "Shoptet UI", url: "#" },
           ]}
         />
-        <UI.SectionControls>
-          <UI.ButtonLink
+        <SectionControls>
+          <ButtonLink
             href="https://github.com/TomKalina/next-shoptet-ui"
             variant="muted"
           >
             github
-          </UI.ButtonLink>
-          <UI.Help url="https://shoptet-stout.vercel.app/" text="storybook" />
-        </UI.SectionControls>
+          </ButtonLink>
+          <Help url="https://shoptet-stout.vercel.app/" text="storybook" />
+        </SectionControls>
         <form>
           <div className="v2form">
-            <UI.CheckboxField label="CheckboxField" />
-            <UI.ColorField label="ColorField" />
-            <UI.DateField label="DateField" />
-            <UI.EmailField label="EmailField" />
-            <UI.NumberField label="NumberField" />
-            <UI.PasswordField label="PasswordField" />
-            {/* <UI.PhoneField label="label" country={} /> */}
-            <UI.RadioField label="RadioField" />
-            <UI.SelectField
+            <CheckboxField label="CheckboxField" />
+            <ColorField label="ColorField" />
+            <DateField label="DateField" />
+            <EmailField label="EmailField" />
+            <NumberField label="NumberField" />
+            <PasswordField label="PasswordField" />
+            {/* <PhoneField label="label" country={} /> */}
+            <RadioField label="RadioField" />
+            <SelectField
               label="SelectField"
               options={{ 1: "value 1", 2: "value 2" }}
             />
-            <UI.StaticField label="StaticField">StaticField</UI.StaticField>
-            <UI.TextareaField label="TextareaField" />
-            <UI.TextField label="TextField" />
-            <UI.FormRow label="TextField">ahoj</UI.FormRow>
-            <UI.Button>Button</UI.Button>
-            <UI.ButtonLink>ButtonLink</UI.ButtonLink>
+            <StaticField label="StaticField">StaticField</StaticField>
+            <TextareaField label="TextareaField" />
+            <TextField label="TextField" />
+            <FormRow label="TextField">ahoj</FormRow>
+            <Button>Button</Button>
+            <ButtonLink>ButtonLink</ButtonLink>
           </div>
         </form>
-        {/* <UI.Dropdown label="label" items={} /> */}
-        {/* <UI.IconButton  /> */}
-        {/* <UI.Input /> */}
-        {/* <UI.LabelAfter label="LabelAfter" /> */}
-        {/* <UI.Modal /> */}
-        {/* <UI.Popover /> */}
-        {/* <UI.Select /> */}
-        {/* <UI.Textarea /> */}
-        {/* <UI.Spinner /> */}
-        {/* <UI.Tooltip text="test" /> */}
-        <UI.StatsCard value="StatsCard" title={longText} />
-        <UI.SystemMessage
+        {/* <Dropdown label="label" items={} /> */}
+        {/* <IconButton  /> */}
+        {/* <Input /> */}
+        {/* <LabelAfter label="LabelAfter" /> */}
+        {/* <Modal /> */}
+        {/* <Popover /> */}
+        {/* <Select /> */}
+        {/* <Textarea /> */}
+        {/* <Spinner /> */}
+        {/* <Tooltip text="test" /> */}
+        <StatsCard value="StatsCard" title={longText} />
+        <SystemMessage
           level="alert"
           title="SystemMessage"
           description={longText}
@@ -131,7 +131,7 @@ export default function Home() {
             ))}
           </TableBody>
         </Table>
-      </UI.Section>
+      </Section>
     </main>
   );
 }
