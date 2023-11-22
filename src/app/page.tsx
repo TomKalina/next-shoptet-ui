@@ -57,7 +57,7 @@ export default function Home() {
       <Section title="Shoptet UI">
         <Breadcrumbs
           breadcrumbs={[
-            { id: 1, title: "Home", url: "#" },
+            { id: 1, url: "#" },
             { id: 2, title: "Storybook", url: "#" },
             { id: 3, title: "Shoptet UI", url: "#" },
           ]}
