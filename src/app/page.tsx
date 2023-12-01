@@ -1,6 +1,27 @@
 "use client";
 
-import { Breadcrumbs, Button, ButtonLink, CheckboxField, ColorField, DateField, EmailField, FormRow, Help, NumberField, PasswordField, RadioField, Section, SectionControls, SelectField, StaticField, StatsCard, SystemMessage, TextField, TextareaField } from "@shoptet/ui";
+import {
+  Breadcrumbs,
+  Button,
+  ButtonLink,
+  CheckboxField,
+  ColorField,
+  DateField,
+  EmailField,
+  FormRow,
+  Help,
+  NumberField,
+  PasswordField,
+  RadioField,
+  Section,
+  SectionControls,
+  SelectField,
+  StaticField,
+  StatsCard,
+  SystemMessage,
+  TextField,
+  TextareaField,
+} from "@shoptet/ui";
 import "@shoptet/ui/dist/index.css";
 import {
   Table,
@@ -10,6 +31,7 @@ import {
   TableHeader,
   TableRow,
 } from "@shoptet/ui";
+import { BarChart, DoughnutChart, LineChart, PieChart } from "@shoptet/chart";
 
 export default function Home() {
   const longText =
@@ -51,6 +73,29 @@ export default function Home() {
       protein: 3.9,
     },
   ];
+  const barChartData = {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of votes",
+        data: [12, 19, 3, 5, 2, 3],
+      },
+    ],
+  };
+
+  const twoDatasetsData = {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of votes 2019",
+        data: [12, 19, 3, 5, 2, 3],
+      },
+      {
+        label: "# of votes 2023",
+        data: [1, 2, 3, 4, 5, 6],
+      },
+    ],
+  };
 
   return (
     <main>
@@ -131,6 +176,33 @@ export default function Home() {
             ))}
           </TableBody>
         </Table>
+        <h3>Bar</h3>
+        <div style={{ display: "flex" }}>
+          <BarChart data={barChartData} />
+          <BarChart data={barChartData} valueUnit="votes" />
+          <BarChart data={twoDatasetsData} legend />
+        </div>
+
+        <h3>Pie</h3>
+        <div style={{ display: "flex" }}>
+          <PieChart data={barChartData} />
+          <PieChart data={barChartData} valueUnit="votes" />
+          <PieChart data={twoDatasetsData} legend />
+        </div>
+
+        <h3>Line</h3>
+        <div style={{ display: "flex" }}>
+          <LineChart data={barChartData} />
+          <LineChart data={barChartData} valueUnit="votes" />
+          <LineChart data={twoDatasetsData} legend />
+        </div>
+
+        <h3>Doughnut</h3>
+        <div style={{ display: "flex" }}>
+          <DoughnutChart data={barChartData} />
+          <DoughnutChart data={barChartData} valueUnit="votes" />
+          <DoughnutChart data={twoDatasetsData} legend />
+        </div>
       </Section>
     </main>
   );
