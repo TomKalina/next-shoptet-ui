@@ -3,32 +3,32 @@
 import {
   Breadcrumbs,
   Button,
-  ButtonLink,
+  Anchor,
   CheckboxField,
   ColorField,
   DateField,
   EmailField,
   FormRow,
-  Help,
   NumberField,
   PasswordField,
   RadioField,
   Section,
-  SectionControls,
   SelectField,
   StaticField,
   StatsCard,
   SystemMessage,
   TextField,
   TextareaField,
+  SectionControls,
+  IconButton,
 } from "@shoptet/ui";
 import "@shoptet/ui/dist/index.css";
 import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
   TableHeader,
+  TableHeaderCell,
   TableRow,
 } from "@shoptet/ui";
 import { BarChart, DoughnutChart, LineChart, PieChart } from "@shoptet/chart";
@@ -107,15 +107,21 @@ export default function Home() {
             { id: 3, title: "Shoptet UI", url: "#" },
           ]}
         />
-        <SectionControls>
-          <ButtonLink
-            href="https://github.com/TomKalina/next-shoptet-ui"
-            variant="muted"
-          >
-            github
-          </ButtonLink>
-          <Help url="https://shoptet-stout.vercel.app/" text="storybook" />
-        </SectionControls>
+        <SectionControls
+          primaryButton={
+            <Anchor
+              button={{ icon: "shp-face-positive" }}
+              href="https://github.com/TomKalina/next-shoptet-ui"
+            >
+              github
+            </Anchor>
+          }
+          secondaryButton={
+            <Anchor button={true} href="https://www.shoptet.cz">
+              shoptet
+            </Anchor>
+          }
+        ></SectionControls>
         <form>
           <div className="v2form">
             <CheckboxField label="CheckboxField" />
@@ -135,11 +141,11 @@ export default function Home() {
             <TextField label="TextField" />
             <FormRow label="TextField">ahoj</FormRow>
             <Button>Button</Button>
-            <ButtonLink>ButtonLink</ButtonLink>
+            <Anchor href="#">Anchor</Anchor>
           </div>
         </form>
         {/* <Dropdown label="label" items={} /> */}
-        {/* <IconButton  /> */}
+        <IconButton icon="shp-face-positive" />
         {/* <Input /> */}
         {/* <LabelAfter label="LabelAfter" /> */}
         {/* <Modal /> */}
@@ -155,15 +161,15 @@ export default function Home() {
           description={longText}
         />
         <Table>
-          <TableHead>
+          <TableHeader>
             <TableRow>
-              <TableHeader>Dessert (100g serving)</TableHeader>
-              <TableHeader>Calories</TableHeader>
-              <TableHeader>Fat (g)</TableHeader>
-              <TableHeader>Carbs (g)</TableHeader>
-              <TableHeader>Protein (g)</TableHeader>
+              <TableHeaderCell>Dessert (100g serving)</TableHeaderCell>
+              <TableHeaderCell>Calories</TableHeaderCell>
+              <TableHeaderCell>Fat (g)</TableHeaderCell>
+              <TableHeaderCell>Carbs (g)</TableHeaderCell>
+              <TableHeaderCell>Protein (g)</TableHeaderCell>
             </TableRow>
-          </TableHead>
+          </TableHeader>
           <TableBody>
             {rows.map((row, index) => (
               <TableRow key={index}>
