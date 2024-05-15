@@ -32,8 +32,9 @@ import {
   TableRow,
 } from "@shoptet/ui";
 import { BarChart, DoughnutChart, LineChart, PieChart } from "@shoptet/chart";
+import dynamic from "next/dynamic";
 
-export default function Home() {
+function Home() {
   const longText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.";
   const rows = [
@@ -213,3 +214,7 @@ export default function Home() {
     </main>
   );
 }
+
+export default dynamic(() => Promise.resolve(Home), {
+  ssr: false,
+});
